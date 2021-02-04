@@ -14,8 +14,8 @@ stage('Deploy to War On Tomcat'){
 sh "copy target//Persistent.war /"$tomcatWeb}//Persistent.war""
 }
 stage ('Start TomCat Server'){
-sleep(time.5,unit:"SECOUNDS")
+sleep(time:5,unit:"SECOUNDS")
 sh "${tomcatBin}"//startup.sh
-sleep(time.100,unit:"SECOUNDS")
+sleep(time:100,unit:"SECOUNDS")
   }
 }
