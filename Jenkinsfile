@@ -14,8 +14,13 @@ sh "${mvnHome}/bin/mvn package"
 }
 stage('Deploy to War On Tomcat')
   {
-sh "scp target//PersistentWebApp.war /"$tomcatWeb}//PersistentWebApp.war""
+    steps{
+      sshagent(['deplyer']) {
+    // some block
+  sh "scp -o StrictHostKeyChecking=no pipelineTomcat/target/PersistentWebApp.war ec2-user@54.161.54.223:/opt/tomcat/apache-tomcat-9.0.41/webapps"  
 }
+}
+  }
 stage ('Start TomCat Server')
 {
 sleep(time:5,unit:"SECOUNDS")
