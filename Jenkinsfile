@@ -1,6 +1,5 @@
 node{
 
-def tomcatWeb = '/opt/tomcat/apache-tomcat-9.0.41/webapps/'
 def tomcatBin = '/opt/tomcat/apache-tomcat-9.0.41/bin/'
 def tomcatStatus = ''
 stage('SCM Checkout')
