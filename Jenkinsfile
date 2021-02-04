@@ -1,5 +1,5 @@
 node{
-
+def tomcatWeb = '/opt/tomcat/apache-tomcat-9.0.41/webapps'
 def tomcatBin = '/opt/tomcat/apache-tomcat-9.0.41/bin/'
 def tomcatStatus = ''
 stage('SCM Checkout')
@@ -16,7 +16,7 @@ stage('Deploy to War On Tomcat')
     steps{
       sshagent(['deplyer']) {
     // some block
-  sh "copy -o StrictHostKeyChecking=no target//PersistentWebApp.war ec2-user@54.161.54.223:/opt/tomcat/apache-tomcat-9.0.41/webapps"  
+        sh "copy -o StrictHostKeyChecking=no target//PersistentWebApp.war ec2-user@54.161.54.223:/"${tomcatWeb}//PersistentWebApp.war""  
 }
 }
   }
