@@ -24,7 +24,7 @@ node{
 '''
    }*/
    stage('Deploy to Tomcat'){
-     sh "copy target//PersistentWebApp.war /"${tomcatWeb}//PersistentWebApp.war/""
+     sh "cp target//PersistentWebApp.war /"${tomcatWeb}//PersistentWebApp.war/""
    }
       stage ('Start Tomcat Server') {
          sleep(time:5,unit:"SECONDS") 
