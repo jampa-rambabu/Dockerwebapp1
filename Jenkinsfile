@@ -1,6 +1,6 @@
 node{
 
-
+   def tomcatWeb = '/opt/apache-tomcat-9.0.43/webapps'
    def tomcatBin = '/opt/apache-tomcat-9.0.43/bin'
    def tomcatStatus = ''
    stage('SCM Checkout'){
@@ -24,7 +24,7 @@ node{
 '''
    }*/
    stage('Deploy to Tomcat'){
-     sh "cp /var/lib/jenkins/workspace/pipeline1/target/PersistentWebApp.war /opt/apache-tomcat-9.0.43/webapps""
+      sh "cp /var/lib/jenkins/workspace/pipelineTomcat/target/PersistentWebApp.war /"${tomcatWeb}//PersistentWebApp.war/""
    }
       stage ('Start Tomcat Server') {
          sleep(time:5,unit:"SECONDS") 
