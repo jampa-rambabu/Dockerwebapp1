@@ -14,7 +14,7 @@ sh "${mvnHome}/bin/mvn package"
 }
 stage('Deploy to War On Tomcat')
   {
-sh "scp target/Persistent.war /"$tomcatWeb}//Persistent.war""
+sh "scp target//PersistentWebApp.war /"$tomcatWeb}//PersistentWebApp.war""
 }
 stage ('Start TomCat Server')
 {
