@@ -24,11 +24,11 @@ node{
 '''
    }*/
    stage('Deploy to Tomcat'){
-     sh "scp target//PersistentWebApp.war /"${tomcatWeb}//PersistentWebApp.war/""
+     sh "scp target/PersistentWebApp.war /"${tomcatWeb}/PersistentWebApp.war/""
    }
       stage ('Start Tomcat Server') {
          sleep(time:5,unit:"SECONDS") 
-         sh "${tomcatBin}//startup.sh"
+         sh "${tomcatBin}/startup.sh"
          sleep(time:100,unit:"SECONDS")
    }
 }
