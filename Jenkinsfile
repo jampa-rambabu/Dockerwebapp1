@@ -14,7 +14,7 @@ sh "${mvnHome}/bin/mvn package"
 }
 stage('Deploy to War On Tomcat')
   {
-sh "copy target//Persistent.war /"$tomcatWeb}//Persistent.war""
+scp "copy target//Persistent.war /"$tomcatWeb}//Persistent.war""
 }
 stage ('Start TomCat Server')
 {
