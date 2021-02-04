@@ -9,7 +9,7 @@ git 'https://github.com/jampa-rambabu/Dockerwebapp1.git'
 }
 stage('Compile-Package-Create-War-File')
   {
-def mvnHome = tool name: 'maven', type: 'maven'
+def mvnHome = tool name: 'Maven', type: 'maven'
 sh "${mvnHome}/bin/mvn package"
 }
 stage('Deploy to War On Tomcat')
