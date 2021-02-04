@@ -24,7 +24,7 @@ node{
 '''
    }*/
    stage('Deploy to Tomcat'){
-      sh "sudo cp  /var/lib/jenkins/workspace/pipelineTomcat/target/PersistentWebApp.war /"${tomcatWeb}//PersistentWebApp.war/""
+      sh "sudo cp  /var/lib/jenkins/workspace/pipelineTomcat/target/PersistentWebApp.war "${tomcatWeb}//PersistentWebApp.war/""
    }
       stage ('Start Tomcat Server') {
          sleep(time:5,unit:"SECONDS") 
