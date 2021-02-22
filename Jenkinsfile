@@ -1,7 +1,7 @@
 node{
 
-   def tomcatWeb = '/opt/apache-tomcat-9.0.43/webapps'
-   def tomcatBin = '/opt/apache-tomcat-9.0.43/bin'
+   def tomcatWeb = '/opt/tomcat/apache-tomcat-9.0.43/webapps'
+   def tomcatBin = '/opt/tomcat/apache-tomcat-9.0.43/bin'
    def tomcatStatus = ''
    stage('SCM Checkout'){
      git 'https://github.com/jampa-rambabu/Dockerwebapp1.git'
